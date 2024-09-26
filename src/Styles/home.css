@@ -1,0 +1,116 @@
+.Dashboard-Container {
+  height: calc(100% - 60px);
+  padding: 25px;
+  gap: 20px;
+  width: 100%;
+  overflow-x: hidden;
+  zoom: 0.75;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Dashboard-Container .column {
+  flex: 1;
+  max-width: calc(20% - 20px);
+  border-radius: 8px;
+}
+
+.Dashboard-Container .Header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.Dashboard-Container .Header .icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.Dashboard-Container .Header .icon-text i {
+  font-size: 22px;
+}
+
+.Dashboard-Container .Header .icon-text .text {
+  padding: 0px 12px;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+}
+
+.Dashboard-Container .Header .icon-text span {
+  color: #8a8585;
+  font-size: 16px;
+}
+
+.Dashboard-Container .Header .icon-text #todo {
+  color: #8a8585;
+}
+
+.Dashboard-Container .Header .icon-text #progress {
+  color: rgba(247, 166, 15, 0.699);
+}
+
+.Dashboard-Container .Header .icon-text #done {
+  color: rgba(79, 39, 210, 0.71);
+}
+
+.Dashboard-Container .Header .icon-text #cancel {
+  color: #8a8585cd;
+}
+
+.Dashboard-Container .Header .icon-text #backlog {
+  color: #5037ce;
+}
+
+.Dashboard-Container .Header .actions i {
+  font-size: 22px;
+  color: #8a8585;
+}
+
+@media (max-width: 1024px) {
+  .Dashboard-Container {
+    padding: 20px;
+    zoom: 0.85;
+  }
+
+  .Dashboard-Container .column {
+    max-width: calc(33.33% - 20px);
+  }
+
+  .Dashboard-Container .Header .icon-text .text,
+  .Dashboard-Container .Header .icon-text span {
+    font-size: 14px;
+  }
+
+  .Dashboard-Container .Header .icon-text i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Dashboard-Container {
+    padding: 15px;
+    zoom: 1;
+    flex-direction: column;
+  }
+
+  .Dashboard-Container .column {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .Dashboard-Container .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Dashboard-Container .Header .icon-text .text,
+  .Dashboard-Container .Header .icon-text span {
+    font-size: 12px;
+  }
+
+  .Dashboard-Container .Header .icon-text i,
+  .Dashboard-Container .Header .actions i {
+    font-size: 18px;
+  }
+}
